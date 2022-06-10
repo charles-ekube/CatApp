@@ -1,11 +1,11 @@
 import React from 'react';
 
-const Cats = () => {
+const Likes = () => {
     return (
         <>
-            
+
         </>
     )
 }
 
-export default Cats;
+export default Likes;
