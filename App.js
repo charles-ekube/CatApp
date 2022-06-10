@@ -6,15 +6,20 @@
  * @flow strict-local
  */
 
+import { NavigationContainer } from '@react-navigation/native';
 import React from 'react';
+import MyTabBar from './src/router/TabBarComponent';
 import TabBar from './src/router/TabBarComponent';
+import Tabs from './src/router/TabNavigator';
 
 
 
 const App = () => {
 
   return (
-    <TabBar />
+    <NavigationContainer>
+      <Tabs />
+    </NavigationContainer>
   );
 };
 
