@@ -7,7 +7,7 @@ import FastImage from 'react-native-fast-image';
 
 const CatsRow = (props) => {
 
-    const { title, img } = props
+    const { title, img, uri } = props
     const { flexRow, alignCenter, justifyBetween, mb20 } = GStyles
     const { imageStyle, iconStyle } = styles
     const [state, setState] = useState({
@@ -16,8 +16,9 @@ const CatsRow = (props) => {
 
     const renderImage = () => {
         return (
-            <FastImage source={img} style={[imageStyle]}
-                defaultSource={require('../../assets/images/cat.png')} resizeMode="contain" />
+            
+      
+            <Image source={ uri || img  } style={[imageStyle]}/>
         )
     }
 
@@ -38,7 +39,7 @@ const CatsRow = (props) => {
 
 
     return (
-        <View style={[flexRow, alignCenter, justifyBetween, mb20]}>
+        <View style={[flexRow, alignCenter, justifyBetween, mb20]} >
             <View style={[flexRow, alignCenter]}>
                 {renderImage()}
                 <MyText>{title}</MyText>

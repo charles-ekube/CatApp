@@ -8,18 +8,21 @@
 
 import { NavigationContainer } from '@react-navigation/native';
 import React from 'react';
-import MyTabBar from './src/router/TabBarComponent';
-import TabBar from './src/router/TabBarComponent';
+import { Provider } from 'react-redux';
 import Tabs from './src/router/TabNavigator';
+import store from './src/slices/Store';
+
 
 
 
 const App = () => {
 
   return (
-    <NavigationContainer>
-      <Tabs />
-    </NavigationContainer>
+    <Provider store={store}>
+      <NavigationContainer>
+        <Tabs />
+      </NavigationContainer>
+    </Provider>
   );
 };
 

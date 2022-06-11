@@ -67,10 +67,10 @@ function MyTabBar({ state, descriptors, navigation }) {
                         onPress={onPress}
                         onLongPress={onLongPress}
                         style={[flex, alignCenter, justifyCenter]}
+                        key={`TABS_${index}`}
                     >
                         <Image source={isFocused ? imageObj[label.toLowerCase()].active :
                             imageObj[label.toLowerCase()].inActive} resizeMode={'contain'} style={[!isFocused ? tabIconInActive : '', tabIcon]}
-
                         />
                         <MyText style={[isFocused ? activeText : inActiveText, textSize]}>
                             {label}
