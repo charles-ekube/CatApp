@@ -39,8 +39,7 @@ export default catsSlice.reducer;
 
 export function fetchCats() {
     return async dispatch => {
-        dispatch(getCats)
-
+        dispatch(getCats())
         try {
             const response = await fetch(`${url}breeds?attach_breed=0`, {
                 headers: {
