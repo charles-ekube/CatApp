@@ -49,10 +49,9 @@ export function fetchCats() {
             const data = await response.json()
 
             dispatch(getCatsSuccess(data))
-        } catch (error) {
-            dispatch(getCatsFailure(error))
+        } catch (errors) {
+            dispatch(getCatsFailure(errors))
+            // console.log('e', errors)
         }
     }
 }
-
-// https://api.thecatapi.com/v1/images/search?limit=5&page=10&order=Desc
